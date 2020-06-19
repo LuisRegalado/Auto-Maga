@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-ng-53c33": {
+      "hosting": {
+        "login": [
+          "login-ng-53c33"
+        ]
+      }
+    }
+  }
+}

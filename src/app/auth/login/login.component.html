@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title text-center">Log In</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <div class="form-group">
+            <label class="card-text">EMAIL</label>
+            <input type="email" class="form-control" formControlName="email">
+          </div>
+          <div class="form-group">
+            <label class="card-text">Contraseña</label>
+            <input type="password" class="form-control" formControlName="password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log In</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,11 +9,13 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { AngularFireModule} from '@angular/fire';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import { environment} from '../environments/environment';
+import { SideNavbarComponent } from './shared/side-navbar/side-navbar.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        SideNavbarComponent
     ],
     imports: [
         BrowserModule,

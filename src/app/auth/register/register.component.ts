@@ -38,11 +38,9 @@ export class RegisterComponent implements OnInit {
         }
       }else{
         this.alert = true;
-        console.log("las contras son diferentes");
       }
     }else{
       this.alert0 = true;
-      console.log("no tienes permisos para registrarte brou");
     }
   }
 }

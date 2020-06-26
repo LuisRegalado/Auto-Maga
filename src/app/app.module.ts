@@ -10,12 +10,14 @@ import { AngularFireModule} from '@angular/fire';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import { environment} from '../environments/environment';
 import { SideNavbarComponent } from './shared/side-navbar/side-navbar.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        SideNavbarComponent
+        SideNavbarComponent,
+        ContactoComponent
     ],
     imports: [
         BrowserModule,

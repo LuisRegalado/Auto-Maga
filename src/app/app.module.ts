@@ -11,13 +11,19 @@ import { AngularFireAuthModule} from '@angular/fire/auth';
 import { environment} from '../environments/environment';
 import { SideNavbarComponent} from './shared/side-navbar/side-navbar.component';
 import { PhoneLoginComponent } from './phone-login/phone-login.component';
+import { AboutComponent } from './about/about.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
         SideNavbarComponent,
-        PhoneLoginComponent
+        PhoneLoginComponent,
+        AboutComponent,
+        QuestionsComponent,
+        ContactComponent
     ],
   imports: [
     BrowserModule,

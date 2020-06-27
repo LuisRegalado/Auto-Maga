@@ -1,9 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PhoneLoginComponent} from './phone-login/phone-login.component';
+import {AboutComponent} from './about/about.component';
+import {QuestionsComponent} from './questions/questions.component';
+import {ContactComponent} from './contact/contact.component';
 
 
 const routes: Routes = [
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'questions',
+    component: QuestionsComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
   {
     path: 'phone',
     component: PhoneLoginComponent

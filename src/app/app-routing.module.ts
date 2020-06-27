@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {PhoneLoginComponent} from './phone-login/phone-login.component';
 
 
 const routes: Routes = [
+  {
+    path: 'phone',
+    component: PhoneLoginComponent
+  },
   {
     path: '',
     redirectTo: '/home',

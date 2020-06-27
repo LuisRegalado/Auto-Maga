@@ -1,0 +1,35 @@
+<div class="card border-left">
+  <div class="card-header">
+    <p class="card-title">Ingresa con tu celular</p>
+  </div>
+
+  <div class="card-body">
+    <label class="card-subtitle"><i class="fas fa-mobile-alt"></i> Phone number</label>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="phoneNumber.country" class="form-control" placeholder="52" maxlength="2">
+      <input type="text" [(ngModel)]="phoneNumber.area" class="form-control" placeholder="449" maxlength="3">
+      <input type="text" [(ngModel)]="phoneNumber.prefix" class="form-control" placeholder="372" maxlength="3">
+      <input type="text" [(ngModel)]="phoneNumber.line" class="form-control" placeholder="8986" maxlength="4">
+    </div>
+    <div id="recaptcha-container" class="container"></div>
+  </div>
+  <div class="card-footer">
+    <button (click)="sendLoginCode()" class="btn btn-block btn-primary">MANDAR SMS </button>
+  </div>
+</div>
+
+
+<div *ngIf="windowRef.confirmationResult" class="card">
+  <div class="card-header">
+    <p class="card-title" for="code"><i class="fas fa-key"></i> Ingresa el codigo de verificación</p>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <input type="text" name="code" [(ngModel)]="verificationCode" class="form-control">
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary btn-block" (click)="verifyLoginCode()">Verificar</button>
+
+  </div>
+</div>

@@ -47,7 +47,7 @@ export class ContactoComponent implements OnInit {
       pregunta:this.pregunta.value
     }
     
-    this.apis.sendEmail("http://localhost:3000/sendmail",datos).subscribe(
+    this.apis.sendEmail("https://app-node-46ee6.web.app/sendmail",datos).subscribe(
       data => {
         let res:any = data; 
         console.log(

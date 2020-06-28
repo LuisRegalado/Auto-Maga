@@ -1,5 +1,9 @@
 
+.primario{
+  left:0px;
+}
 .navbar-fixed-left{
+  
   width: 140px;
   position: fixed;
   border-radius: 0;
@@ -16,6 +20,7 @@
 }
 
 .navbar-fixed-left -navbar-nav > li > dropdown-menu{
+  
   margin-top: -50px;
   margin-left: 140px;
 }

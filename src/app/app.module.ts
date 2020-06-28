@@ -9,11 +9,19 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AngularFireModule} from '@angular/fire';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import { environment} from '../environments/environment';
+
+
 import { SideNavbarComponent} from './shared/side-navbar/side-navbar.component';
 import { PhoneLoginComponent } from './phone-login/phone-login.component';
 import { AboutComponent } from './about/about.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { ApisService } from './apis.service'
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 @NgModule({
     declarations: [
@@ -23,7 +31,8 @@ import { ContactComponent } from './contact/contact.component';
         PhoneLoginComponent,
         AboutComponent,
         QuestionsComponent,
-        ContactComponent
+        ContactComponent,
+        ContactoComponent
     ],
   imports: [
     BrowserModule,
@@ -31,9 +40,11 @@ import { ContactComponent } from './contact/contact.component';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-    providers: [],
+  providers: [ApisService],
+
     exports: [
         NavbarComponent,
         SideNavbarComponent

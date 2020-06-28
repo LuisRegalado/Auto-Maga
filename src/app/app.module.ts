@@ -19,6 +19,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ApisService } from './apis.service'
 import { HttpClientModule } from '@angular/common/http';
+import { GraphicsComponent } from './graphics/graphics.component';
 
 
 
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
         AboutComponent,
         QuestionsComponent,
         ContactComponent,
-        ContactoComponent
+        ContactoComponent,
+        GraphicsComponent
     ],
   imports: [
     BrowserModule,

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { ApisService } from '../apis.service'
 
 @Component({
   selector: 'app-contacto',
@@ -6,9 +9,54 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
+  
+  constructor(private formBuilder: FormBuilder, public apis:ApisService) {
+   }
 
-  constructor() { }
+   nombre=new FormControl("", [
+    Validators.required,
+    Validators.minLength(4)
+  ]);
 
+  apepat=new FormControl("", [
+    Validators.required,
+    Validators.minLength(4)
+  ]);
+
+  apemat=new FormControl("", [
+    Validators.required,
+    Validators.minLength(4)
+  ]);
+
+  correo=new FormControl("", [
+    Validators.required,
+    Validators.email
+  ]);
+
+  pregunta=new FormControl("", [
+    Validators.required,
+    Validators.minLength(4)
+  ]);
+
+   enviar(){
+    let datos ={
+      name: this.nombre.value,
+      email: this.correo.value,
+      apepat: this.apepat.value,
+      apemat:this.apemat.value,
+      pregunta:this.pregunta.value
+    }
+    
+    this.apis.sendEmail("http://localhost:3000/sendmail",datos).subscribe(
+      data => {
+        let res:any = data; 
+        console.log(
+          `Todo salio perfecto y el mail se envio`
+        );
+      }
+    );
+   
+  }
   ngOnInit(): void {
   }
 

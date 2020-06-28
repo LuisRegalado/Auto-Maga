@@ -12,7 +12,8 @@ import { environment} from '../environments/environment';
 
 import { SideNavbarComponent } from './shared/side-navbar/side-navbar.component';
 import { ContactoComponent } from './contacto/contacto.component';
-
+import { ApisService } from './apis.service'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
     declarations: [
         AppComponent,
@@ -25,9 +26,10 @@ import { ContactoComponent } from './contacto/contacto.component';
         AppRoutingModule,
         ReactiveFormsModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireAuthModule
+        AngularFireAuthModule,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [ApisService],
     exports: [
         NavbarComponent,
         SideNavbarComponent

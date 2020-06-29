@@ -21,7 +21,7 @@ import { ApisService } from './apis.service'
 import { HttpClientModule } from '@angular/common/http';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -45,7 +45,8 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
     AngularFireAuthModule,
     FormsModule,
     HttpClientModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    ChartsModule
   ],
   providers: [ApisService],
 

@@ -6,3 +6,18 @@
   <img src="././assets/fondo.jpg"class="img-fluid nologueado" alt="Responsive image">
 </ng-template>
 
+<div class="qrCode">
+  <td>
+      <tr>
+        <ngx-qrcode 
+          [elementType]="elementType" 
+          [value] = "value"
+          cssClass = "aclass"
+          errorCorrectionLevel = "L">
+        </ngx-qrcode>
+      </tr>
+      <tr>
+        <p style="color:rgb(255,255,255);">DESCARGA LA APP</p>
+      </tr>
+    </td>
+</div>

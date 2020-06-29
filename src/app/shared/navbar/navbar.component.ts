@@ -10,8 +10,7 @@ import {Observable} from 'rxjs';
   providers: [AuthService]
 })
 export class NavbarComponent{
-  elementType = 'url';
-  value = 'https://bit.ly/3dIPmra'
+  
   public user$: Observable <any> = this.authS.afAuth.user;
   constructor(private authS: AuthService, private router: Router) { }
   async onLogout()

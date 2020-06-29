@@ -35,7 +35,7 @@ import { ChartsModule } from 'ng2-charts';
         QuestionsComponent,
         ContactComponent,
         ContactoComponent,
-        GraphicsComponent
+        GraphicsComponent,
     ],
   imports: [
     BrowserModule,

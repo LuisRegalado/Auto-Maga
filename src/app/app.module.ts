@@ -20,6 +20,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { ApisService } from './apis.service'
 import { HttpClientModule } from '@angular/common/http';
 import { GraphicsComponent } from './graphics/graphics.component';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 
 
@@ -43,7 +44,8 @@ import { GraphicsComponent } from './graphics/graphics.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxQRCodeModule
   ],
   providers: [ApisService],
 

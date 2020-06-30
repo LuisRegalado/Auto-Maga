@@ -17,6 +17,12 @@
   max-width: 100%;
 
 }
-
+.qrCode{
+  height: 0px;
+  width: 0px;
+  top:340px; left:1150px;
+  position: relative;
+  z-index: 70;
+}
 
 

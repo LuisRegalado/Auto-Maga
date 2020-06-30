@@ -19,7 +19,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ApisService } from './apis.service'
 import { HttpClientModule } from '@angular/common/http';
-
+import { GraphicsComponent } from './graphics/graphics.component';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -32,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
         AboutComponent,
         QuestionsComponent,
         ContactComponent,
-        ContactoComponent
+        ContactoComponent,
+        GraphicsComponent,
     ],
   imports: [
     BrowserModule,
@@ -41,7 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxQRCodeModule,
+    ChartsModule
   ],
   providers: [ApisService],
 

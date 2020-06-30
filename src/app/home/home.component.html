@@ -1,7 +1,22 @@
-<div class="home">
-  <h2>Te damos la bienvenida a Auto Maga</h2>
-  <h3>Somos tu agencia para renta de unidades para viajes</h3>
-  <h4>Somos tu mejor opcion</h4>
-  <img src="././assets/fondo.jpg" width="1400" height="700">
-
+<div class="qrCode">
+  <td>
+      <tr>
+        <ngx-qrcode 
+          [elementType]="elementType" 
+          [value] = "value"
+          cssClass = "aclass"
+          errorCorrectionLevel = "L">
+        </ngx-qrcode>
+      </tr>
+      <tr>
+        <p style="color:rgb(255,255,255);">DESCARGA LA APP</p>
+      </tr>
+    </td>
 </div>
+<div class="home">
+  <img src="././assets/fondo.jpg"class="img-fluid logueado" alt="Responsive image" *ngIf="user$ | async as user ; else nologueado">
+  
+</div>
+<ng-template #nologueado>
+  <img src="././assets/fondo.jpg"class="img-fluid nologueado" alt="Responsive image">
+</ng-template>

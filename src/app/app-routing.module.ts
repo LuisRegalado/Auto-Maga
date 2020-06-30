@@ -5,12 +5,17 @@ import {PhoneLoginComponent} from './phone-login/phone-login.component';
 import {AboutComponent} from './about/about.component';
 import {QuestionsComponent} from './questions/questions.component';
 import {ContactComponent} from './contact/contact.component';
+import { GraphicsComponent } from './graphics/graphics.component';
 
 
 export const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'graphics',
+    component: GraphicsComponent
   },
   {
     path: 'questions',

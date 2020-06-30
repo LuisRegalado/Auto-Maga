@@ -1,8 +1,22 @@
-.card{
-  position: absolute;
-  top: 95px;
-  left: 170px;
-  right: 0px;
-  bottom: 0px;
+
+ .logueado{
+  background-size: cover;
+  position: relative;
+  top:0px; left:140px;
+  width: 1225px;
+  height: 545px;
+  max-width: 100%;
 
 }
+.nologueado{
+  background-size: cover;
+  position: relative;
+  top:0px; left:0px;
+  width: 1400px;
+  height: 545px;
+  max-width: 100%;
+
+}
+
+
+

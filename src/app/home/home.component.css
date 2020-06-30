@@ -18,12 +18,11 @@
 
 }
 .qrCode{
-  background-size: cover;
+  height: 0px;
+  width: 0px;
+  top:370px; left:1200px;
   position: relative;
-  top:-175px; left:1200px;
-  width: 1400px;
-  height: 545px;
-  max-width: 100%;
+  z-index: 70;
 }
 
 

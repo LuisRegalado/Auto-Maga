@@ -1,11 +1,3 @@
-<div class="home">
-  <img src="././assets/fondo.jpg"class="img-fluid logueado" alt="Responsive image" *ngIf="user$ | async as user ; else nologueado">
-  
-</div>
-<ng-template #nologueado>
-  <img src="././assets/fondo.jpg"class="img-fluid nologueado" alt="Responsive image">
-</ng-template>
-
 <div class="qrCode">
   <td>
       <tr>
@@ -21,3 +13,10 @@
       </tr>
     </td>
 </div>
+<div class="home">
+  <img src="././assets/fondo.jpg"class="img-fluid logueado" alt="Responsive image" *ngIf="user$ | async as user ; else nologueado">
+  
+</div>
+<ng-template #nologueado>
+  <img src="././assets/fondo.jpg"class="img-fluid nologueado" alt="Responsive image">
+</ng-template>

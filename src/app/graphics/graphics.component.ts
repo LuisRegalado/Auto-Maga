@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { ApisService } from '../apis.service';
 
 @Component({
   selector: 'app-graphics',
@@ -26,7 +27,19 @@ export class GraphicsComponent implements OnInit {
     { data: [65, 59, 80, 81, 56, 55, 60], label: 'Registros Mensuales' },
   ];
 
-  constructor() { }
+  constructor(public apis:ApisService) {
+    this.apis.getUsers().subscribe(
+      info => {
+        this.barChartData = [
+          { data: [info["enero"], info["febrero"], info["marzo"], info["abril"], info["mayo"], info["junio"], info["julio"]], label: 'Registros Mensuales' },
+        ];
+      },
+      err => {
+        console.log(err);
+      }
+      
+    );
+   }
 
   ngOnInit() {
   }

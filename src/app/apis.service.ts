@@ -10,4 +10,11 @@ export class ApisService {
   sendEmail(url, data) {
     return this.httpClient.post(url, data);
   }
+
+  getUsers() {
+    return this.httpClient.get("https://app-node-46ee6.web.app/meses");
+  }
+  getLinkApp() {
+    return this.httpClient.get("https://app-node-46ee6.web.app/apps");
+  }
 }

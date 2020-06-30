@@ -10,9 +10,13 @@ import { Router } from '@angular/router';
   providers: [AuthService]
 })
 export class RegisterComponent implements OnInit {
+  alert = false;
+  alert0 = false;
   registerForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
+    conf: new FormControl(''),
+    admin: new FormControl(''),
   });
 
   constructor(private authS: AuthService, private router: Router) { }
@@ -21,13 +25,22 @@ export class RegisterComponent implements OnInit {
   }
 
   async onRegister(){
-    const { email, password} = this.registerForm.value;
-    try{
-      const user = await this.authS.register(email, password);
-      if (user){
-        this.router.navigate(['home']);
+    const { email, password, conf, admin} = this.registerForm.value;
+    if (admin === '1234'){
+      if (password === conf){
+        try{
+          const user = await this.authS.register(email, password);
+          if (user){
+            this.router.navigate(['home']);
+          }
+        }catch (e) {
+          console.log(e);
+        }
+      }else{
+        this.alert = true;
       }
-    }catch (e) {console.log(e);}
+    }else{
+      this.alert0 = true;
+    }
   }
-
 }

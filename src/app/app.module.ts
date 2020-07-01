@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { ChartsModule } from 'ng2-charts';
+import { ClienteComponent } from './cliente/cliente.component';
 
 
 
@@ -36,6 +37,7 @@ import { ChartsModule } from 'ng2-charts';
         ContactComponent,
         ContactoComponent,
         GraphicsComponent,
+        ClienteComponent,
     ],
   imports: [
     BrowserModule,

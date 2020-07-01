@@ -1,0 +1,16 @@
+<form  class="formulario" id="contactForm" [formGroup]="form" (ngSubmit)="submit()">
+    
+    <input  placeholder="Nombre" class="form-control" formControlName="firstname">
+  <br>
+  
+    <input  placeholder="Apellidos" class="form-control"  formControlName="lastname">
+  <br>
+  
+    <input  placeholder="Correo" class="form-control"  formControlName="email">
+  <br>
+  
+    <textarea rows="4" cols="50"  placeholder="Algun comentario en especifico" class="form-control"  formControlName="message"></textarea>
+  <br>
+  <button type="button" class="btn btn-primary">Enviar</button>
+  </form>
+

@@ -23,6 +23,8 @@ import { GraphicsComponent } from './graphics/graphics.component';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { ChartsModule } from 'ng2-charts';
 import { OptionsLoginComponent } from './options-login/options-login.component';
+import { ClienteComponent } from './cliente/cliente.component';
+
 
 
 
@@ -38,6 +40,7 @@ import { OptionsLoginComponent } from './options-login/options-login.component';
         ContactoComponent,
         GraphicsComponent,
         OptionsLoginComponent,
+        ClienteComponent
     ],
   imports: [
     BrowserModule,

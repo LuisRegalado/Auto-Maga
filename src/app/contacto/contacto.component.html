@@ -1,27 +1,52 @@
 
 
-<div class="formulario">
-  <div class="form-group">
-    <label class="col-form-label col-form-label-lg text-white bg-warning" for="inputLarge">Tu pregunta sera enviada a nuestros expertos y se te respondera a la brevedad</label>
-    <br>
-    <label class="col-form-label col-form-label-lg" for="inputLarge">Nombre:</label>
-    <input class="form-control form-control-lg" type="text" placeholder="ej. Romain" id="inputLarge" [formControl]="nombre">
+<div class="card">
+  <div class="card-header">
+    <h1 class="card-title">Ingresa tus datos y pregunta y será contestada a la brevedad por expertos</h1>
   </div>
-  <div class="form-group">
-    <label class="col-form-label col-form-label-lg" for="inputLarge">Apellido Paterno :</label>
-    <input class="form-control form-control-lg" type="text" placeholder="ej. Hernandez" id="inputLarge" [formControl]="apepat">
+  <div class="card-body">
+    <div class="form-group">
+
+      <div class="form-group">
+        <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Nombre:</p>
+        <input class="form-control form-control-lg" type="text" placeholder="ej. Romain" id="inputLarge" [formControl]="nombre">
+      </div>
+
+      <div class="form-group">
+        <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Apellido Paterno :</p>
+        <input class="form-control form-control-lg" type="text" placeholder="ej. Hernandez" id="inputLarge" [formControl]="apepat">
+      </div>
+
+      <div class="form-group">
+        <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Apellido Materno:</p>
+        <input class="form-control form-control-lg" type="text" placeholder="ej. Romo" id="inputLarge" [formControl]="apemat">
+      </div>
+      <div class="form-group">
+        <p class="card-text" for="inputLarge"><i class="fas fa-at"></i>Correo:</p>
+        <input class="form-control form-control-lg" type="text" placeholder="Correo al que esperas tu respuesta" id="inputLarge" [formControl]="correo">
+      </div>
+
+      <div class="form-group">
+        <p class="card-text" for="exampleTextarea" ><i class="fas fa-question"></i> Ingresa tu pregunta</p>
+        <textarea class="form-control" id="exampleTextarea" rows="3" [formControl]="pregunta"></textarea>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label class="col-form-label col-form-label-lg" for="inputLarge">Apellido Materno:</label>
-    <input class="form-control form-control-lg" type="text" placeholder="ej. Romo" id="inputLarge" [formControl]="apemat">
+  <div class="container">
+    <button  type="button" class="btn btn-primary btn-block" (click)="enviar()">Enviar</button>
   </div>
-  <div class="form-group">
-    <label class="col-form-label col-form-label-lg" for="inputLarge">Correo:</label>
-    <input class="form-control form-control-lg" type="text" placeholder="Correo al que esperas tu respuesta" id="inputLarge" [formControl]="correo">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label col-form-label-lg" for="exampleTextarea" >Ingresa tu pregunta</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3" [formControl]="pregunta"></textarea>
-  </div>
-  <button  type="button" class="btn btn-primary" (click)="enviar()">Enviar!</button>
 </div>
+
+<div class="card">
+  <div class="card-header">
+    <h3><i class="fas fa-address-book"></i> Tambien te puedes comunicar con nostros por medio de </h3>
+  </div>
+  <div class="card-body">
+      <p><i class="fas fa-phone"></i> 449-111-11-11</p>
+      <p><i class="fas fa-mobile-alt"></i> 9-70-13-55</p>
+      <p><i class="fab fa-facebook"></i> Auto Maga</p>
+      <p><i class="fab fa-instagram"></i> AutoMagaOficial</p>
+  </div>
+</div>
+
+

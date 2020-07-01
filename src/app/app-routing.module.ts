@@ -6,9 +6,14 @@ import {AboutComponent} from './about/about.component';
 import {QuestionsComponent} from './questions/questions.component';
 import {ContactComponent} from './contact/contact.component';
 import { GraphicsComponent } from './graphics/graphics.component';
+import {OptionsLoginComponent} from "./options-login/options-login.component";
 
 
 export const routes: Routes = [
+  {
+    path: 'options',
+    component: OptionsLoginComponent
+  },
   {
     path: 'about',
     component: AboutComponent

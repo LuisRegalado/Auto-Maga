@@ -9,7 +9,9 @@ import { ApisService } from '../apis.service'
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
-  
+  loading = false;
+  textoenviar="Enviar";
+  exito=false;
   constructor(private formBuilder: FormBuilder, public apis:ApisService) {
    }
 
@@ -39,6 +41,8 @@ export class ContactoComponent implements OnInit {
   ]);
 
    enviar(){
+    this.loading=true;
+    this.textoenviar="Enviando..."
     let datos ={
       name: this.nombre.value,
       email: this.correo.value,
@@ -53,6 +57,15 @@ export class ContactoComponent implements OnInit {
         console.log(
           `Todo salio perfecto y el mail se envio`
         );
+      },
+      err => {
+        console.log(err);
+        this.loading = false;
+        this.textoenviar = "Enviar";
+      },() => {
+        this.exito=true;
+        this.loading = false;
+        this.textoenviar = "Submit";
       }
     );
    

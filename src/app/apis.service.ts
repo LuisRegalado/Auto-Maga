@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,4 +19,7 @@ export class ApisService {
   getLinkApp() {
     return this.httpClient.get("https://app-node-46ee6.web.app/apps");
   }
+  getUsersList(){
+    return (this.httpClient.get("https://app-node-46ee6.web.app/api/getUsers")).pipe(map((data:any)=>data["data"]));
+ }
 }

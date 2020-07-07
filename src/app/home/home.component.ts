@@ -16,10 +16,9 @@ export class HomeComponent implements OnInit {
   public user$: Observable <any> = this.authS.afAuth.user;
   
   constructor(private authS: AuthService, public apis:ApisService) { 
-    this.apis.getLinkApp().subscribe(
+    this.apis.getUsersList().subscribe(
     data => {
-      this.value = data["link"]; 
-      console.log(this.value);
+      this.value = JSON.stringify(data); 
     },
     err => {
       console.log(err);

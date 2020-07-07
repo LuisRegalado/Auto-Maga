@@ -9,6 +9,7 @@ import { ApisService } from '../apis.service';
   styleUrls: ['./graphics.component.css']
 })
 export class GraphicsComponent implements OnInit {
+  registro:any[]=[];
   public barChartOptions: ChartOptions = {
     responsive: true,
     scales: { xAxes: [{}], yAxes: [{}] },
@@ -19,20 +20,50 @@ export class GraphicsComponent implements OnInit {
       }
     }
   };
-  public barChartLabels: Label[] = ['Diciembre', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'];
+  public barChartLabels: Label[] = ["Usuarios", "Administradores", "Embarques"];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
 
   public barChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 60], label: 'Registros Mensuales' },
+    { data: [0,0,0], label: 'Registros de la empresa' },
   ];
 
   constructor(public apis:ApisService) {
-    this.apis.getUsers().subscribe(
-      info => {
-        this.barChartData = [
-          { data: [info["enero"], info["febrero"], info["marzo"], info["abril"], info["mayo"], info["junio"], info["julio"]], label: 'Registros Mensuales' },
-        ];
+    this.apis.getUsersList().subscribe(
+      data => {
+        this.apis.getUsersList().subscribe(
+          info => {
+            this.apis.getUsersList().subscribe(
+              size => {
+                var counterData = 0;
+                var counterInfo = 0;
+                var counterSize = 0;
+
+                Object.keys(data).forEach(function(key) {
+                  counterData ++;
+                });
+                Object.keys(info).forEach(function(key) {
+                  counterInfo ++;
+                });
+                Object.keys(size).forEach(function(key) {
+                  counterSize ++;
+                });
+        
+                this.barChartData = [
+                  { data: [counterData, counterInfo, counterSize], label: 'Registros de la empresa' },
+                ];
+              },
+              err => {
+                console.log(err);
+              }
+              
+            );
+          },
+          err => {
+            console.log(err);
+          }
+          
+        );
       },
       err => {
         console.log(err);

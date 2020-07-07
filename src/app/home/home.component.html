@@ -1,4 +1,4 @@
-<div class="qrCode">
+<div class="qrCode" *ngIf="user$ | async as user">
   <td>
       <tr>
         <ngx-qrcode 
@@ -9,7 +9,7 @@
         </ngx-qrcode>
       </tr>
       <tr>
-        <p style="color:rgb(255,255,255);">DESCARGA LA APP</p>
+        <p style="color:rgb(255,255,255);">USUARIOS REGISTRADOS</p>
       </tr>
     </td>
 </div>

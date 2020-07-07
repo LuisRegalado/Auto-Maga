@@ -12,15 +12,15 @@
   background-size: cover;
   position: relative;
   top:0px; left:0px;
+  max-width: 100%;
+  max-height: 100%;
   width: 1400px;
   height: 545px;
-  max-width: 100%;
-
 }
 .qrCode{
   height: 0px;
   width: 0px;
-  top:340px; left:1150px;
+  top:250px; left:10px;
   position: relative;
   z-index: 70;
 }

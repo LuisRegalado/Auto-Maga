@@ -1,0 +1,22 @@
+<div class="formulario">
+    <p class="card-text" for="inputLarge">Modelo:</p>
+    <input  placeholder="Modelo del transporte..." class="form-control" [formControl]="modelo">
+    <br>
+    <p class="card-text" for="inputLarge">Tipo de combustible</p>
+    <input  placeholder="Magna,Premium,Diesel..." class="form-control"  [formControl]="gas">
+    <br>
+    <p class="card-text" for="inputLarge">Condicion del vehiculo: </p>
+    <input  placeholder="Buena,mala,regular..." class="form-control"  [formControl]="condicion">
+    <br>
+    <p class="card-text" for="inputLarge">Capacidad de vehiculo </p>
+    <input type="number" placeholder="Numero de personas ..." class="form-control"  [formControl]="numero">
+    <br>
+    <button type="button" class="btn btn-primary" (click)="enviar()"  [disabled]="loading">{{textoenviar}}</button>
+
+    <div class="alert alert-dismissible alert-success" *ngIf="exito">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading">Tu registro se realizo con exito</h4>
+    </div>
+
+</div>
+

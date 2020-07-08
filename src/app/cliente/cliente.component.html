@@ -1,16 +1,20 @@
-<form  class="formulario" id="contactForm" (ngSubmit)="submit()">
-    
+
+<div class="formulario">  
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i>Nombre:</p>
     <input  placeholder="Nombre" class="form-control" [formControl]="nombre">
   <br>
-  
-    <input  placeholder="Contraseña" class="form-control"  [formControl]="contra">
+  <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Contraseña</p>
+    <input type="password" placeholder="Contraseña" class="form-control"  [formControl]="contra">
   <br>
-  
+  <p class="card-text" for="inputLarge"><i class="fas fa-at"></i> Direccion de correo electronico:</p>
     <input  placeholder="Correo" class="form-control"  [formControl]="correo">
 
-  <button type="button" class="btn btn-primary" (click)="submit()">Enviar</button>
-  </form>
-  <div>
-    
-  </div>
+    <button type="button" class="btn btn-primary" (click)="enviar()"  [disabled]="loading">{{textoenviar}}</button>
+
+    <div class="alert alert-dismissible alert-success" *ngIf="exito">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading">Tu registro se realizo con exito</h4>
+    </div>
+</div>
+ 
 

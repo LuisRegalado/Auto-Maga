@@ -9,6 +9,9 @@ import { ApisService } from '../apis.service'
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
+  loading = false;
+  textoenviar="Enviar";
+  exito=false;
   value:any;
   constructor(private formBuilder: FormBuilder, public apis:ApisService) {
    }
@@ -28,14 +31,16 @@ export class ClienteComponent implements OnInit {
   ]);
 
    
-   submit() {
+   enviar() {
+    this.loading=true;
+    this.textoenviar="Enviando..."
      let datos={
         nombre:this.nombre.value,
         correo:this.correo.value,
         contra:this.contra.value
      }
 
-    this.apis.usuarios("http://localhost:5000/api/createUser",datos).subscribe(
+    this.apis.usuarios("https://app-node-46ee6.web.app/api/createUser",datos).subscribe(
       data => {
         let res:any = data; 
         console.log(
@@ -46,18 +51,10 @@ export class ClienteComponent implements OnInit {
         console.log(err);
        
       },() => {
-       
+        this.exito=true;
+        this.loading = false;
+        this.textoenviar = "Enviar";
       }
-    );
-    this.apis.getUsuarios().subscribe(
-      data => {
-        this.value = data; 
-        console.log(this.value);
-      },
-      err => {
-        console.log(err);
-      }
-      
     );
 
   }

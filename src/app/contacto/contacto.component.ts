@@ -65,7 +65,7 @@ export class ContactoComponent implements OnInit {
       },() => {
         this.exito=true;
         this.loading = false;
-        this.textoenviar = "Submit";
+        this.textoenviar = "Enviar";
       }
     );
    

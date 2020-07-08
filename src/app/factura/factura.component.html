@@ -1,0 +1,49 @@
+<mat-card class="contact-card formulario">
+    <mat-card-header>
+      <mat-card-title>Datos de factura</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form id="contactForm" [formGroup]="form" (ngSubmit)="submit()">
+      <mat-form-field>
+        <input matInput placeholder="Entidad a la que se realizo la compra..." class="form-control" formControlName="entidad">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Motivo de compra ..." class="form-control"  formControlName="motivo">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Correo de entidad" class="form-control"  formControlName="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Cantidad de total de producto" class="form-control"  formControlName="cantidad">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <textarea rows="4" cols="50" matInput placeholder="Descripcion de productos" class="form-control"  formControlName="producto"></textarea>
+      </mat-form-field>
+      <br>
+      
+      <button mat-button color="primary">Submit</button>
+      
+      <mat-list role="list" *ngIf="exito">
+        <mat-list-item class="confi"><mat-icon>details</mat-icon> Confirmacion de factura</mat-list-item>
+        <mat-list-item class="valor">{{form.value.entidad}}</mat-list-item>
+        <mat-list-item class="valor">{{form.value.motivo}}</mat-list-item>
+        <mat-list-item class="valor">{{form.value.email}}</mat-list-item>
+        <mat-list-item class="valor">{{form.value.cantidad}}</mat-list-item>
+        <mat-list-item class="valor">{{form.value.producto}}</mat-list-item>
+      </mat-list>
+
+      <div class="alert alert-dismissible alert-warning" *ngIf="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Ingresa todos los campos!</h4>
+        <p class="mb-0"></p>
+    </div>
+</form>
+    </mat-card-content>
+  </mat-card>

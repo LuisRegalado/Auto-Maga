@@ -1,11 +1,12 @@
 
 .primario{
   left:0px;
+  
 }
 .navbar-fixed-left{
   
   width: 140px;
-  position: fixed;
+  position: absolute;
   border-radius: 0;
   height: 100%;
 }

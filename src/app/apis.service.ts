@@ -27,4 +27,10 @@ export class ApisService {
   getUsersList(){
     return (this.httpClient.get("https://app-node-46ee6.web.app/api/getUsers")).pipe(map((data:any)=>data["data"]));
  }
+  getDriversList(){
+    return (this.httpClient.get("https://app-node-46ee6.web.app/api/getDrivers")).pipe(map((data:any)=>data["data"]));
+  }
+  getUnitiesList(){
+    return (this.httpClient.get("https://app-node-46ee6.web.app/api/getUnity")).pipe(map((data:any)=>data["data"]));
+  }
 }

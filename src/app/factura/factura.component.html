@@ -27,11 +27,11 @@
         <textarea rows="4" cols="50" matInput placeholder="Descripcion de productos" class="form-control"  formControlName="producto"></textarea>
       </mat-form-field>
       <br>
-
+      
       <button mat-button color="primary">Submit</button>
       
       <mat-list role="list" *ngIf="exito">
-        <mat-list-item class="confi">Confirmacion de factura</mat-list-item>
+        <mat-list-item class="confi"><mat-icon>details</mat-icon> Confirmacion de factura</mat-list-item>
         <mat-list-item class="valor">{{form.value.entidad}}</mat-list-item>
         <mat-list-item class="valor">{{form.value.motivo}}</mat-list-item>
         <mat-list-item class="valor">{{form.value.email}}</mat-list-item>

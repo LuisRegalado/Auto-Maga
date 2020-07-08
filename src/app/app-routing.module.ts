@@ -8,8 +8,9 @@ import {ContactComponent} from './contact/contact.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import {OptionsLoginComponent} from "./options-login/options-login.component";
 import {ClienteComponent} from './cliente/cliente.component'
-
-
+import {ChoferComponent} from './chofer/chofer.component';
+import {UnidadComponent} from './unidad/unidad.component';
+import {FacturaComponent}from './factura/factura.component';
 export const routes: Routes = [
   {
     path: 'options',
@@ -42,7 +43,10 @@ export const routes: Routes = [
   },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }, { path: 'login', loadChildren: () => import('./auth/login/login.module').then(m => m.LoginModule) }, { path: 'register', loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule) },
   {path:'contacto', component:ContactoComponent },
-  {path:'cliente', component:ClienteComponent }
+  {path:'cliente', component:ClienteComponent },
+  {path:'unidad', component:UnidadComponent },
+  {path:'chofer', component:ChoferComponent },
+  {path:'factura',component:FacturaComponent}
 
 ];
 

@@ -1,0 +1,20 @@
+.formulario{
+    position: absolute;
+    top: 95px;
+    left: 170px;
+    right: 0px;
+    bottom: 0px;
+  
+  }
+ .valor{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-style: oblique;
+    background-color: #90EE90;
+  }
+  .confi{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-style: oblique;
+    background-color: #EE320A;
+  }

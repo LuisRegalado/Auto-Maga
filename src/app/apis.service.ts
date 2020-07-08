@@ -13,7 +13,13 @@ export class ApisService {
     return this.httpClient.post(url, data);
   }
   usuarios(url,data){
-    return this.httpClient.post(url,data)
+    return this.httpClient.post(url,data);
+  }
+  chofer(url,data){
+    return this.httpClient.post(url,data);
+  }
+  unidad(url,data){
+    return this.httpClient.post(url,data) 
   }
   getUsuarios(){
     return this.httpClient.get("http://localhost:5000/api/getUsers")

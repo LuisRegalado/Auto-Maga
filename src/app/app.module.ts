@@ -24,8 +24,16 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { ChartsModule } from 'ng2-charts';
 import { OptionsLoginComponent } from './options-login/options-login.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { UnidadComponent } from './unidad/unidad.component';
+import { ChoferComponent } from './chofer/chofer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FacturaComponent } from './factura/factura.component';
 
-
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -40,7 +48,10 @@ import { ClienteComponent } from './cliente/cliente.component';
         ContactoComponent,
         GraphicsComponent,
         OptionsLoginComponent,
-        ClienteComponent
+        ClienteComponent,
+        UnidadComponent,
+        ChoferComponent,
+        FacturaComponent
     ],
   imports: [
     BrowserModule,
@@ -51,7 +62,13 @@ import { ClienteComponent } from './cliente/cliente.component';
     FormsModule,
     HttpClientModule,
     NgxQRCodeModule,
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatListModule
   ],
   providers: [ApisService],
 

@@ -1,0 +1,28 @@
+<div class="formulario">
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Nombre:</p>
+    <input  placeholder="Nombre" class="form-control" [formControl]="nombre">
+    <br>
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Apellido paterno:</p>
+    <input  placeholder="Apellido Paterno" class="form-control"  [formControl]="apepat">
+    <br>
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Apellido Materno:</p>
+    <input  placeholder="Apellido Materno" class="form-control"  [formControl]="apemat">
+    <br>
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i> Direccion:</p>
+    <input  placeholder="Calle" class="form-control"  [formControl]="calle">
+    <br>
+    <input type="number" placeholder="Numero de casa ..." class="form-control"  [formControl]="numero">
+    <br>
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i>Telefono:</p>
+    <input  placeholder="Numero telefonico" class="form-control"  [formControl]="telefono">
+    <br>
+    <p class="card-text" for="inputLarge"><i class="far fa-user"></i>CURP</p>
+    <input  placeholder="..." class="form-control"  [formControl]="curp">
+    <button type="button" class="btn btn-primary" (click)="enviar()"  [disabled]="loading">{{textoenviar}}</button>
+
+    <div class="alert alert-dismissible alert-success" *ngIf="exito">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading">Tu registro se realizo con exito</h4>
+    </div>
+</div>
+

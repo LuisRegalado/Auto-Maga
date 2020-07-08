@@ -20,7 +20,7 @@ export class GraphicsComponent implements OnInit {
       }
     }
   };
-  public barChartLabels: Label[] = ["Usuarios", "Administradores", "Embarques"];
+  public barChartLabels: Label[] = ["Usuarios", "Conductores", "Unidades"];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
 
@@ -31,9 +31,9 @@ export class GraphicsComponent implements OnInit {
   constructor(public apis:ApisService) {
     this.apis.getUsersList().subscribe(
       data => {
-        this.apis.getUsersList().subscribe(
+        this.apis.getDriversList().subscribe(
           info => {
-            this.apis.getUsersList().subscribe(
+            this.apis.getUnitiesList().subscribe(
               size => {
                 var counterData = 0;
                 var counterInfo = 0;

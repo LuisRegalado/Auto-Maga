@@ -1,12 +1,28 @@
 
 <div class="home">
-  
+
   <img src="././assets/aunto.png"class="img-fluid logueado" alt="Responsive image" *ngIf="user$ | async as user ; else nologueado">
 
-  
+  <div class="container chido">
+
+      <h1 class="text-center text-danger">Somos una empresa 100% mexicana que se dedica a la renta de equipos de transporte para cualquier tipo de viaje dentro de la República mexicana,
+        estamos firmemente comprometidos con tu bienestar, seguridad y comodidad desde el momento que llegas con una idea hasta que la procesamos y
+        nos hacemos cargo de hacerla realidad</h1>
+  </div>
+
+
+
+
 </div>
 <ng-template #nologueado>
   <img src="././assets/aunto.png"class="img-fluid nologueado" alt="Responsive image">
+  <div class="container chido">
+
+    <h1 class="text-center text-danger">Somos una empresa 100% mexicana que se dedica a la renta de equipos de transporte para cualquier tipo de viaje dentro de la República mexicana,
+      estamos firmemente comprometidos con tu bienestar, seguridad y comodidad desde el momento que llegas con una idea hasta que la procesamos y
+      nos hacemos cargo de hacerla realidad</h1>
+  </div>
+
 </ng-template>
 
 

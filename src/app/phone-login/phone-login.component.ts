@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WindowService} from '../window.service';
 import * as firebase from 'firebase';
 import { Router} from '@angular/router';
+import { FormGroup, FormControl} from '@angular/forms';
 
 export class PhoneNumber{
   country: string;
@@ -25,6 +26,10 @@ export class PhoneLoginComponent implements OnInit {
   verificationCode: string;
   user: any;
 
+  registerForm = new FormGroup({
+    admin: new FormControl('')
+  });
+
   constructor(private win: WindowService, private router: Router) { }
 
   ngOnInit() {
@@ -34,6 +39,7 @@ export class PhoneLoginComponent implements OnInit {
   }
 
   sendLoginCode() {
+    const { admin } = this.registerForm.value;
     const appVerifier = this.windowRef.recaptchaVerifier;
     const num = this.phoneNumber.e164;
     firebase.auth().signInWithPhoneNumber(num, appVerifier)
@@ -52,7 +58,7 @@ export class PhoneLoginComponent implements OnInit {
           this.router.navigate(['home']);
         }
       }).catch(error => {
-        console.log(error, "si pusiste bien codigo mijo?");
+        console.log(error, "¿Ingresaste bien código?");
     });
   }
 

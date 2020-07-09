@@ -25,6 +25,8 @@ export class RegisterComponent implements OnInit {
   }
 
   async onRegister(){
+    this.alert = false;
+    this.alert0 = false;
     const { email, password, conf, admin} = this.registerForm.value;
     if (admin === '1234'){
       if (password === conf){
@@ -37,10 +39,10 @@ export class RegisterComponent implements OnInit {
           console.log(e);
         }
       }else{
-        this.alert = true;
+        return this.alert = true;
       }
     }else{
-      this.alert0 = true;
+      return this.alert0 = true;
     }
   }
 }
